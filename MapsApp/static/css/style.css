@@ -423,6 +423,7 @@ input#id_destination:focus::placeholder {
   width: 22px;
   position: relative;
   top: 20;
+  margin-left: 3px;
 }
 
 .tube-line-results-start {
@@ -547,12 +548,30 @@ input#id_destination:focus::placeholder {
 
 .my-emoji {
   position: relative;
-  font-size: 13px;
   text-align: center;
   font-weight: bolder;
   color: white;
-  right: 52px;
+  right: -26px;
+  transform: scale(.5);
+  text-shadow: 0 2px 4px rgba(0,0,0,.3);
+  transition: text-shadow .2s ease-in-out, transform .2s ease-in-out;
+  width: 70%;
+  height: 70%;
 }
+
+.my-emoji:hover {
+  transform: scale(.8) translatey(-5px);
+  text-shadow: 0 20px 20px rgba(0,0,0,.3);
+}
+
+/* .my-emoji:before {
+  content: '👋';
+}
+
+.my-emoji:hover:before {
+  content: '👇';
+} */
+
 
 ul.my-list {
   list-style-type: none;
@@ -633,7 +652,7 @@ ul.my-list {
   font-size: 24px;
   vertical-align: top;
   position: relative;
-  top: 22;
+  top: 30;
 }
 
 #bus {

@@ -28,7 +28,7 @@ SECRET_KEY = '&7i8$@(b!%3fc2mj^5565x^avxg@!@v_yfc-_ked%$f9746-74'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['londonmaps.herokuapp.com']
+ALLOWED_HOSTS = ['londonmaps.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -124,4 +124,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
