@@ -1,0 +1,814 @@
+
+body {
+  background-color: white;
+}
+
+.topnav {
+  position: fixed;
+  overflow: hidden;
+  background-color: #7851a9;
+  height: 70px;
+  top: 0;
+  width: 100%;
+}
+
+#text {
+  display: none;
+}
+
+.container-1 {
+  position: fixed;
+  top: 100px;
+  left: 2%;
+  height: 500px;
+  width: 400px;
+  z-index: 1;
+}
+
+#field-marker {
+  color: purple;
+}
+
+.errorlist {
+  color: red;
+  font-size: 12px;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../font/Raleway-Thin.ttf');
+}
+
+svg.svgViz {
+  flex:1;
+  height: 100vh;
+  weight: 100vw;
+  transform: translate(1%, 0%);
+}
+
+.container {
+
+  background-color: #7851a9;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  font: inherit;
+  font-family: 'Raleway';
+  font-size: 20;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+div.results {
+  position: relative;
+  width: 30%;
+  height: 80%;
+  top: 12%;
+  left:2%;
+  background-color: #7851a9;
+  z-index: 1;
+  display: none;
+  border-radius: 15px;
+  overflow: scroll;
+}
+
+.texting {
+  position: relative;
+  bottom: -10px;
+  font-weight: bold;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+form.main-form {
+  margin-bottom: 4em;
+}
+
+input[type=submit] {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: #7851a9;
+  /* font-family: "Nunito"; */
+  font-size: 24;
+  font: inherit;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  width: 5em;
+  top: 15px;
+}
+
+input#id_origin:focus,
+input#id_destination:focus {
+  opacity: 0.5;
+  color: black;
+  border-width: 2px;
+  border-color: black;
+}
+
+
+.subcontainer {
+  position: relative;
+  /* left: 5%; */
+  background-color: white;
+  width: 360px;
+  height: 300px;
+  border-radius: 15px 15px 15px 15px;
+  margin-top: 1em;
+  padding: 15px;
+  top: 20px;
+}
+
+/* #myModal {
+  z-index: 0;
+} */
+
+.modal-title {
+  margin-left: 41%;
+}
+
+.modal-question {
+  position: absolute;
+  margin-left: 26%;
+  width: 100%;
+  color: white;
+}
+
+#popupf #fields {
+  /* margin-left: 40%; */
+  top: 40px;
+  margin-left: 35%;
+  margin-right: 30%;
+  font-family: 'Raleway';
+}
+
+
+.modal-body {
+  margin: auto;
+}
+
+.modal-content {
+  border-radius: 50px;
+}
+
+.modal-header {
+  background-color: #7851a9;
+  border-radius: 20px 20px 0 0;
+  font-family: 'Raleway'
+}
+
+.modal-footer {
+  background-color: #7851a9;
+  border-radius: 0px 0px 20px 20px;
+}
+
+#start-image:hover {
+  cursor: pointer;
+}
+
+.ui-tooltip {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font: bold 14px"Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+}
+
+#form-header {
+  color: black;
+}
+
+input#id_origin {
+  width: 18em;
+  height: 3.5em;
+  font-size:16px;
+  border-radius: 8px;
+  position: relative;
+  top: 10px;
+}
+
+input#id_origin::placeholder {
+  font-size:16px;
+  transition: font-size 0.5s;
+  font-weight: bolder;
+}
+
+input#id_origin:focus::placeholder {
+  font-size: 12px;
+}
+
+
+input#id_destination {
+  width: 18em;
+  height: 3.5em;
+  font-size:16px;
+  border-radius: 8px;
+  position: relative;
+  top: 10px;
+}
+
+input#id_destination::placeholder {
+  font-size:16px;
+  transition: font-size 0.5s;
+  font-weight: bolder;
+}
+
+input#id_destination:focus::placeholder {
+  font-size: 12px;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  font-family: 'Raleway';
+  color: white;
+  top: 10px;
+  width: 70%;
+  margin: auto;
+}
+
+.mynig-origin, .mynig-destination {
+  font-size:18px;
+  font-family: 'Raleway';
+  color: #7851a9;
+  font-weight: bold;
+  border: 1px solid #a9a9a9;
+}
+
+
+
+#results-smith {
+  position: relative;
+  top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height:60px;
+}
+
+#results-header {
+  font-family: 'Raleway';
+  font-size: 20px;
+  position: relative;
+  color: white;
+  width: 100%;
+  text-align: center;
+  top: 3%;
+}
+
+
+.results_all_ {
+  /* position: relative; */
+  /* border: 3px solid blue; */
+  width: 100%;
+  margin: auto;
+  /* padding: 2em; */
+  height: 12%;
+  /* flex-direction: column; */
+}
+/* .half {
+   flex-grow: 0;
+   flex-shrink: 0;
+   flex-basis: 50%;
+} */
+.actualMap {
+  position: fixed;
+  right: 0;
+  top: 4em;
+  width: 100%;
+  height: 92%;
+  /* border: 3px solid black; */
+  border-radius: 1em;
+}
+
+#googleMap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.routes_top {
+  position: relative;
+  top: 40;
+  background-color: #ae96cb;
+  border-radius: 0px;
+  z-index: 2;
+  border-top: 0.5px solid white;
+  border-bottom: 0.5px solid white;
+  color: black;
+  font-family: 'Raleway';
+  font-size: 18;
+  text-align: left;
+  text-indent: 5px;
+  /* display: inline-block; */
+  width: 100%;
+  min-height: 83px;
+  overflow: hidden;
+  float:left;
+}
+
+.selected-route {
+  background-color: #9373ba;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  top: 40;
+  border-radius: 0px;
+  z-index: 2;
+  border-top: 0.5px solid white;
+  border-bottom: 0.5px solid white;
+  color: black;
+  font-family: 'Raleway';
+  font-size: 18;
+  text-align: left;
+  text-indent: 5px;
+  /* display: inline-block; */
+  width: 100%;
+  min-height: 83px;
+  overflow: hidden;
+  float:left;
+}
+
+#duration {
+  position: absolute;
+  top:23;
+  right: 10;
+  color: white;
+}
+
+.routes_bottom {
+  background-color: inherit;
+  /* padding: 20px; */
+  border-radius: 15px;
+  top: 20px;
+  color: black;
+  font-family: 'Raleway';
+  font-size: 12;
+  text-align: left;
+  text-indent: 40px;
+  display: none;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.leg-summary {
+  font-family: 'Raleway';
+  font-size: 12;
+  color: white;
+  top: 0px;
+  position: relative;
+  margin-left: 3%;
+  display: inline-block;
+  max-width: 200px;
+  word-wrap: break-word;
+
+}
+
+.leg-summary-tube {
+  font-family: 'Raleway';
+  font-size: 14;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-bottom: -14px;
+  top: -20px;
+  margin-left: -15%;
+}
+
+.leg-summary-bus {
+  font-family: 'Raleway';
+  font-size: 14;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-bottom: -14px;
+  top: -18px;
+  margin-left: -15%;
+}
+
+#walker {
+  color: white;
+  font-size: 21px;
+  position: relative;
+  top: 24px;
+}
+
+#walker-bottom {
+  color: white;
+  font-size: 21px;
+  position: relative;
+  margin-top: 2%;
+  margin-left: 2%
+}
+
+#circle {
+  color: white;
+  font-size: 5px;
+  /* margin: auto; */
+  /* vertical-align: text-top; */
+  width: 2%;
+  position: relative;
+  top: 17px;
+}
+
+.tube-line {
+  height: 22px;
+  width: 22px;
+  position: relative;
+  top: 20;
+}
+
+.tube-line-results-start {
+  height: 26px;
+  width: 32px;
+  position: relative;
+  top: 45;
+  margin-left: 10%;
+}
+.tube-line-results-end {
+  height: 26px;
+  width: 32px;
+  position: relative;
+  top: 45;
+  margin-left: 48%;
+}
+
+.national-line-results-start {
+  height: 22px;
+  width: 30px;
+  position: relative;
+  top: 43;
+  margin-left: 10%;
+}
+
+.national-line-results-end {
+  height: 22px;
+  width: 30px;
+  position: relative;
+  top: -23;
+  margin-left: 66%;
+}
+
+.overground-line-results-start {
+  height: 26px;
+  width: 32px;
+  position: relative;
+  top: 45;
+  margin-left: 10%;
+}
+.overground-line-results-end {
+  height: 26px;
+  width: 32px;
+  position: relative;
+  top: -24px;
+  margin-left: 66%;
+}
+
+.dlr-line-results-start {
+  height: 26px;
+  width: 32px;
+  position: relative;
+  top: 45;
+  margin-left: 10%;
+}
+
+.dlr-line-results-end {
+  height: 26px;
+  width: 32px;
+  position: relative;
+  top: -24;
+  margin-left: 66%;
+}
+
+
+
+#bus-start {
+  color: white;
+  font-size: 21px;
+  vertical-align: super;
+  position: relative;
+  top: 40;
+  width: 21px;
+  margin-left: 2%;
+}
+
+#bus-end {
+  color: white;
+  font-size: 21px;
+  vertical-align: super;
+  position: relative;
+  margin-top: -24px;
+  width: 21px;
+  margin-left: 58%;
+}
+
+.tube-line-stops {
+  height: 16px;
+  width: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.walk-duration {
+  position: relative;
+  margin-top: -4%;
+  text-align: right;
+  margin-right: 15%;
+  color: white;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.tube-duration {
+  position: relative;
+  top: 16px;
+  text-align: right;
+  margin-right: 15%;
+  color: white;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.bus-duration {
+  position: relative;
+  top: 16px;
+  text-align: right;
+  margin-right: 15%;
+  color: white;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.my-emoji {
+  position: relative;
+  font-size: 13px;
+  text-align: center;
+  font-weight: bolder;
+  color: white;
+  right: 52px;
+}
+
+ul.my-list {
+  list-style-type: none;
+  display: inline-block;
+  color: white;
+  margin-left: 8%;
+}
+
+.pac-container {
+  font-family: 'Raleway';
+  z-index: 99999999 !important;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 462px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  /* border-style: solid;
+  border-color: #555; */
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 105%;
+  left: 12.5%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.route-separator {
+  position: relative;
+  transform: translate(-10%,0px);
+  -webkit-transform: translate(-10%,0px);
+}
+
+.tooltip-tube-img#from {
+  height: 30px;
+  width: 30px;
+}
+
+.tooltip-tube-img#to {
+  height: 30px;
+  width: 30px;
+}
+
+.tooltip-stroke {
+  /* height: 30px; */
+  width: 150px;
+  position: relative;
+  bottom: 14px;
+}
+
+.tube-line:hover+.tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  font-size: 10px;
+}
+
+/* .tube-line:hover {
+  display: block;
+} */
+
+
+
+.bus-pic {
+  height: 38px;
+  width: 38px;
+  vertical-align: sub;
+  position: relative;
+  top: 20;
+}
+
+#national-rail {
+  color: white;
+  font-size: 24px;
+  vertical-align: top;
+  position: relative;
+  top: 22;
+}
+
+#bus {
+  color: white;
+  font-size: 23px;
+  vertical-align: super;
+  position: relative;
+  top: 30;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* #Pin {
+  opacity: 0;
+  animation: fadein 1s ease-in forwards 0.5s;
+} */
+
+@keyframes fadeinroute {
+  0% {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  100% {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+}
+
+#Route1 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 1s;
+}
+
+#Route2 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 1.1s;
+}
+
+#Route3 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 1.2s;
+}
+
+#Route4 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 1.3s;
+}
+#Route5 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 1.4s;
+}
+#Route6 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 1.5s;
+}
+#Route7 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 1.6s;
+}
+#Route8 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 1.7s;
+}
+#Route9 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 1.8s;
+}
+#Route10 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 1.9s;
+}
+#Route11 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 2s;
+}
+#Route12 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 2.1s;
+}
+#Route13 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 2.2s;
+}
+#Route14 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 2.3s;
+}
+#Route15 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 2.4s;
+}
+#Route16 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 2.5s;
+}
+#Route17 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 2.6s;
+}
+#Route18 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 2.7s;
+}
+#Route19 {
+  opacity: 0;
+  animation: fadeinroute 0.2s ease-in forwards 2.8s;
+}
+
+
+@keyframes fadeoutroute {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+
+#Vector1 {
+  animation: landing 1s ease;
+}
+#Vector2 {
+  animation: landing 1s ease;
+}
+#Vector3 {
+  animation: landing 1s ease;
+}
+#Vector4 {
+  animation: landing 1s ease;
+}
+#Vector5 {
+  animation: landing 1s ease;
+}
+#Vector6 {
+  animation: landing 1s ease;
+}
+
+@keyframes landing {
+  from {
+    transform: scale(0.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#Pin {
+  animation: move;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(60px) translateY(-200px);
+  }
+  to {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+path.vector_pin:hover {
+  fill: #7851a9;
+  cursor: pointer;
+}
+
+
+@keyframes shake {
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50%{
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
