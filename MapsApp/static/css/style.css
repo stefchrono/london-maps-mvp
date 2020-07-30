@@ -546,7 +546,7 @@ input#id_destination:focus::placeholder {
   font-weight: bolder;
 }
 
-.my-emoji {
+/* .my-emoji {
   position: relative;
   text-align: center;
   font-weight: bolder;
@@ -562,7 +562,7 @@ input#id_destination:focus::placeholder {
 .my-emoji:hover {
   transform: scale(.8) translatey(-5px);
   text-shadow: 0 20px 20px rgba(0,0,0,.3);
-}
+} */
 
 /* .my-emoji:before {
   content: '👋';
