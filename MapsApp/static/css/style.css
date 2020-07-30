@@ -546,21 +546,18 @@ input#id_destination:focus::placeholder {
   font-weight: bolder;
 }
 
-/* .my-emoji {
+.my-emoji {
   position: relative;
-  text-align: center;
-  font-weight: bolder;
-  color: white;
-  right: -26px;
-  transform: scale(.5);
-  text-shadow: 0 2px 4px rgba(0,0,0,.3);
-  transition: text-shadow .2s ease-in-out, transform .2s ease-in-out;
-  width: 70%;
-  height: 70%;
+
 }
 
-.my-emoji:hover {
-  transform: scale(.8) translatey(-5px);
+.my-emoji img {
+  width: 28px;
+  height: 28px;
+}
+
+/* .my-emoji:hover {
+  transform: scale(1.4) translatey(-5px);
   text-shadow: 0 20px 20px rgba(0,0,0,.3);
 } */
 
