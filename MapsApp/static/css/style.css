@@ -552,6 +552,8 @@ input#id_destination:focus::placeholder {
   height: 28px;
   font-family: 'Raleway';
   color: white;
+  right: -120px;
+  font-weight: bolder;
 }
 
 /* .my-emoji img {
