@@ -548,13 +548,18 @@ input#id_destination:focus::placeholder {
 
 .my-emoji {
   position: relative;
-
-}
-
-.my-emoji img {
   width: 28px;
   height: 28px;
+  font-family: 'Raleway';
+  color: white;
 }
+
+/* .my-emoji img {
+  display: inline-block;
+  position: relative;
+  width: 28px;
+  height: 28px;
+} */
 
 /* .my-emoji:hover {
   transform: scale(1.4) translatey(-5px);

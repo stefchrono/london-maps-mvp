@@ -376,11 +376,7 @@
 
                     {% if leg.mode.name != 'walking' %}
                       {% if leg.path.stopPoints %}
-
-                          <div class="my-emoji">
-                            <img src="{% static 'images/traffic-sign.png' %}" alt="Check out the stops!" id="my-emoji-{{ forloop.counter }}">
-                          </div>
-
+                        <div class="my-emoji" id="my-emoji-{{ forloop.counter }}">Stops</div>
                       {% endif %}
                     {% endif %}
 
