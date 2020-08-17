@@ -24,13 +24,10 @@ class HomePageView(TemplateView):
         form = PostCodes(request.POST)
         print(form)
         if form.is_valid():
-            app_id = '03315ccd'
-            app_key = '20be96920a9a9de7d6f63b72056e69a1'
+            app_id = os.environ.get('TFL_API_ID')
+            app_key = os.environ.get('TFL_API_KEY')
             origin = request.POST['origin']
             destination = request.POST['destination']
-            # headers = {
-            #     'Cookie': '__cfduid=db4d776e939787360085dbbc9990d299e1592294081'
-            # }
 
             routes = []
             stops = []
